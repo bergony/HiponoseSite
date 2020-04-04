@@ -39,7 +39,7 @@ router.post('https://hipnose.netlify.com/', function(req, res) {
             console.log('Email sent: ' + info.response);
         }
     });
-    return res.redirect("/");
+    return res.redirect("https://hipnose.netlify.com/");
 });
 module.exports = router;
 
