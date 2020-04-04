@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 
 
 /* GET users listing. */
-router.post('/', function(req, res) {
+router.post('https://hipnose.netlify.com/', function(req, res) {
 
     const body = req.body;
     console.log(body);
