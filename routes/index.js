@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 
 
 /* GET users listing. */
-router.post('https://hipnose.netlify.com/', function(req, res) {
+router.post('/', function(req, res) {
 
     const body = req.body;
     console.log(body);
@@ -39,7 +39,7 @@ router.post('https://hipnose.netlify.com/', function(req, res) {
             console.log('Email sent: ' + info.response);
         }
     });
-    return res.redirect("https://hipnose.netlify.com/");
+    return res.redirect("https://hipnose.netlify.com");
 });
 module.exports = router;
 
