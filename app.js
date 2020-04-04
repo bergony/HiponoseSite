@@ -1,15 +1,19 @@
+'use strict';
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const bodyParser = require('body-parser');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var router = express.Router();
+
+
+var indexRouter = require('./routes/index.js');
+var usersRouter = require('./routes/users.js');
 var seacherRouter = require('./routes/seacher');
 
 var app = express();
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,6 +45,9 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+app.use(bodyParser.json());
+app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 
 module.exports = app;
