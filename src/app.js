@@ -46,7 +46,7 @@ app.use(function(err, req, res, next) {
 
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
-app.use('/', (req, res) => res.render(path.join(__dirname, '../views/index.ejs')));
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../views/index.ejs')));
 
 
 module.exports = app;
