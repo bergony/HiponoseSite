@@ -300,7 +300,7 @@
                             </p>
                             <br>
 
-                            <img style='float:left;width:300px;height:200px; margin-right:10px; margin-bottom: 10px;'
+                            <img style='float:left;width:300px;height:250px; margin-right:10px; margin-bottom: 10px;'
                                 src="public/images/DaveElman.jpeg" />
                             <h5>Dave Elman</h5>
                             <p>Um notável apresentador de rádio, comediante e compositor americano, e uma figura
@@ -321,7 +321,7 @@
                             </p>
                             <br>
 
-                            <img style='float:left;width:300px;height:200px; margin-right:10px; margin-bottom: 10px;'
+                            <img style='float:left;width:300px;height:400px; margin-right:10px; margin-bottom: 10px;'
                                 src="public/images/erickson.jpg" />
                             <h5> Milton Hyland Erickson</h5>
                             <p>Psiquiatra norte-americano especializado em Hipnose Médica e Terapia Familiar. Foi
@@ -1422,20 +1422,27 @@
                             convido para dar o primeiro passo em busca de sua transformação e juntos encontrarmos, o
                             caminho para o aprimoramento das suas emoções e atitudes. Assuma o controle da sua mente e
                             mude de vida!</h6>
+                            <br>
+                        <h6 class="text-justify">
+                            A vida pode ser muito difícil e, às vezes, a ajuda de um profissional competente
+                            pode ser um diferencial muito efetivo. Há momentos em que eu não encontro as palavras certas
+                            para
+                            expressar o quanto eu me importo com cada um dos meus pacientes - sejam adultos, idosos ou
+                            adolescentes,
+                            pois são eles que inspiram a minha total devoção ao trabalho e são as suas vidas que me
+                            direcionam a dar
+                            o melhor que existe em mim todos os dias.
+                        </h6>
+                        <br>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="bio-content">
-            <br>
-            <h6 class="text-justify">A vida pode ser muito difícil e, às vezes, a ajuda de um profissional competente
-                pode ser um diferencial muito efetivo. Há momentos em que eu não encontro as palavras certas para
-                expressar o quanto eu me importo com cada um dos meus pacientes - sejam adultos, idosos ou adolescentes,
-                pois são eles que inspiram a minha total devoção ao trabalho e são as suas vidas que me direcionam a dar
-                o melhor que existe em mim todos os dias.
-            </h6>
-            <br>
+
 
             <h1 class="text-md-center">COMPROMISSO </h1>
             <p class="text-md-center">Entendo as necessidades dos meus pacientes e atendo com sigilo absoluto, Tenho um
@@ -1744,8 +1751,8 @@
                         class="btn btn-outline-warning">Instagram</a>
                     <a href="https://www.youtube.com/channel/UC2uiXltJGN82HGlUPvdxTeg?view_as=subscriber"
                         target="blank3" class="btn btn-outline-danger">Youtube</a>
-                        <a href="https://www.linkedin.com/in/dodora-silva-90595429/"
-                        target="blank4" class="btn btn-outline-secondary">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/dodora-silva-90595429/" target="blank4"
+                        class="btn btn-outline-secondary">LinkedIn</a>
                 </div>
             </div>
 
@@ -1857,16 +1864,16 @@
 
     <script>
 
-            document.getElementById("myLink").onclick = function () {
-                var elements = getElementsById(
+        document.getElementById("myLink").onclick = function () {
+            var elements = getElementsById(
                 "nome Sobrenome Endereco Cidade Estado CEP Telefone Email Assunto Messagem"
             );
-            text = "mailto:izadoramar@gmail.com?subject=" + elements[8] + "&body=" + elements[0] + " " + elements[1] + " Moro na " + elements[2] + " " + elements[3] + "/" + elements[4] +" CEP: "+elements[5]+ " Meu telefone " + elements[6] + " Email " + elements[7] + " Messagem: " + elements[9] + "";
+            text = "mailto:izadoramar@gmail.com?subject=" + elements[8] + "&body=" + elements[0] + " " + elements[1] + " Moro na " + elements[2] + " " + elements[3] + "/" + elements[4] + " CEP: " + elements[5] + " Meu telefone " + elements[6] + " Email " + elements[7] + " Messagem: " + elements[9] + "";
 
-                document.getElementById("mailTo").href = text;
-                window.location = text;
-                return false;
-            };
+            document.getElementById("mailTo").href = text;
+            window.location = text;
+            return false;
+        };
 
         function abreLink() {
             var login = document.getElementById("searchTerm").value;
