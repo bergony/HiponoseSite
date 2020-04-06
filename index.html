@@ -1531,13 +1531,13 @@
                                     <div class="row justify-content-center mb=5">
                                         <div class="col-sm-12 col-mb-10 col-lg-8">
 
-                                            <form  action="mailto:izadoramar@gmail.com?subject=HipnoseEspecialista" method="post" enctype="text/plain">
-                                                <a href="mailto:izadoramar@gmail.com">chriscoyier@gmail.com</a>
+                                            <form>
+                                                <a id="mailTo" href="mailto:izadoramar@gmail.com"></a>
                                                 <div class="form-row">
                                                     <div class="form-group col-sm-6">
                                                         <label for="nome">Seu nome</label>
-                                                        <input type="text" class="form-control" id="nome"
-                                                            name="nome" placeholder="Nome" />
+                                                        <input type="text" class="form-control" id="nome" name="nome"
+                                                            placeholder="Nome" />
                                                     </div>
                                                     <div class="form-group col-sm-6">
                                                         <label for="Sobrenome">Seu Sobrenome</label>
@@ -1610,8 +1610,8 @@
 
                                                     <div class="form-group col-sm-6">
                                                         <label for="Email">Seu Email</label>
-                                                        <input type="text" class="form-control" id="Email"
-                                                            name="Email" placeholder="E-Mail" />
+                                                        <input type="text" class="form-control" id="Email" name="Email"
+                                                            placeholder="E-Mail" />
                                                     </div>
                                                 </div>
 
@@ -1627,8 +1627,8 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-sm-12">
                                                         <label for="Messagem">Sua Messagem</label>
-                                                        <textarea class="form-control" id="Messagem"
-                                                            name="Messagem" rows="3" placeholder="..."></textarea>
+                                                        <textarea class="form-control" id="Messagem" name="Messagem"
+                                                            rows="3" placeholder="..."></textarea>
                                                     </div>
                                                 </div>
 
@@ -1647,12 +1647,11 @@
 
                                                 <div class="form-row">
                                                     <div class="form-group col-sm-12 mt-3">
-                                                        <button type="submit" class="btn btn-primary"
-                                                            >
+                                                        <button id="myLink" type="submit" class="btn btn-primary"
+                                                            onclick="abreEmail(); event.preventDefault();">
                                                             Enviar
                                                         </button>
-                                                        <button type="reset" class="btn btn-primary"
-                                                            >
+                                                        <button type="reset" class="btn btn-primary">
                                                             Resetar
                                                         </button>
 
@@ -1850,6 +1849,17 @@
 
 
     <script>
+
+            document.getElementById("myLink").onclick = function () {
+                var elements = getElementsById(
+                "nome Sobrenome Endereco Cidade Estado CEP Telefone Email Assunto Messagem"
+            );
+            text = "mailto:izadorarmar@gmail.com?subject=" + elements[8] + "&body=" + elements[0] + " " + elements[1] + " Moro na " + elements[2] + " " + elements[3] + "/" + elements[4] +" CEP: "+elements[5]+ " Meu telefone " + elements[6] + " Email " + elements[7] + " Messagem: " + elements[9] + "";
+
+                document.getElementById("mailTo").href = text;
+                window.location = text;
+                return false;
+            };
 
         function abreLink() {
             var login = document.getElementById("searchTerm").value;
