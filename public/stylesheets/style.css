@@ -162,12 +162,12 @@ section .section-title {
 
 .backside .card a {
     font-size: 18px;
-    color: #007bff !important;
+    color: #dc3545 !important;
 }
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: #007bff !important;
+    color: #dc3545 !important;
 }
 
 .frontside .card .card-body img {
@@ -188,3 +188,10 @@ p + p {
     height: 300px;
     width: 300px;
 }
+
+.nav-pills .nav-link.active {
+    background-color: #dc3545!important;
+}
+.nav-link {
+    color: black;
+  }
